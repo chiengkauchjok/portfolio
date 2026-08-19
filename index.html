@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chiengkuach Aleer Awan | IT Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:#f1f5f9;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+position:fixed;
+width:100%;
+background:#0f172a;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:#38bdf8;
+font-size:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+section{
+padding:120px 10%;
+min-height:100vh;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.glow{
+font-size:45px;
+color:#38bdf8;
+text-shadow:0 0 15px #38bdf8;
+}
+
+.typing{
+margin-top:10px;
+font-size:20px;
+color:#94a3b8;
+}
+
+.hero img{
+margin-top:20px;
+width:280px;
+border-radius:20px;
+box-shadow:0 0 30px #38bdf8;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+border-radius:5px;
+margin-top:20px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+}
+
+h2{
+margin-bottom:20px;
+color:#38bdf8;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+margin-bottom:20px;
+transition:0.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.skills-grid,.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+#contact a{
+color:white;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Chiengkuach Aleer Awan</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-text">
+<h2 class="glow">Chiengkuach Aleer Awan</h2>
+<p>AKA Toney CK</p>
+<p class="typing" id="typing"></p>
+<a href="Toney_CK_CV.pdf" download class="btn">Download CV</a>
+</div>
+<img src="profile.jpeg" alt="Profile">
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+IT has been my dream since primary school, and today I am working hard to turn that dream into a successful career.
+
+Education has been my greatest journey despite the hardships I have faced. With faith in God and strong determination, my dream is to become a professional Web Developer and Network Engineer.
+
+I am passionate about building technological solutions that improve security systems and traffic management in developing countries.
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+
+<div class="card">
+<strong>Bachelor of Information Technology (Ongoing)</strong><br>
+University of Kigali – Rwanda<br>
+Web Development & Networking Engineering
+</div>
+
+<div class="card">
+<strong>High School Certificate</strong><br>
+Elite High School – Juba, South Sudan
+</div>
+
+<div class="card">
+<strong>Primary School Certificate</strong><br>
+Keyo 2 Primary School – Adjumani District, Uganda
+</div>
+
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="skills-grid">
+<div class="card">
+<h3>Web Development</h3>
+HTML, CSS, JavaScript, Responsive Design, Swift,Python 
+</div>
+
+<div class="card">
+<h3>Networking</h3>
+IP Addressing, Subnetting, Router & Switch Configuration
+</div>
+
+<div class="card">
+<h3>Tools</h3>
+Git, GitHub, VS Code
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Academic Projects</h2>
+<div class="projects-grid">
+
+<div class="card">
+<h3>Biometric System</h3>
+Designed to enhance identification and security systems.
+</div>
+
+<div class="card">
+<h3>Traffic Light System</h3>
+Smart traffic control concept for cities without traffic lights.
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+Email: <a href="mailto:toneyck7@gmail.com">toneyck7@gmail.com</a> <br><br>
+Location: Kigali, Rwanda <br><br>
+LinkedIn: <a href="https://www.linkedin.com/in/chiengkuach-aleer-toneyck-aka-chiengtech-12b4b4393/" target="_blank">Chiengkuach Aleer Awan</a> <br><br>
+</div>
+</section>
+
+<footer>
+© 2026 Chiengkuach Aleer Awan     &nbsp;&nbsp;&nbsp;All rights reserved.
+</footer>
+
+<script>
+const text = ["IT Student", "Web Developer", "Networking Engineer"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+if(count === text.length){
+count = 0;
+}
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+count++;
+index = 0;
+setTimeout(type,1000);
+}else{
+setTimeout(type,100);
+}
+})();
+
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', ()=>{
+cards.forEach(card=>{
+const cardTop = card.getBoundingClientRect().top;
+if(cardTop < window.innerHeight - 100){
+card.classList.add('show');
+}
+});
+});
+</script>
+
+</body>
+</html>
+index.html
+Displaying index.html.
